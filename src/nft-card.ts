@@ -17,7 +17,7 @@ import { getProvider, networkFromId, networkFromString } from './utils'
 
 declare const window: CustomWindow
 
-const HORIZONTAL_MIN_CARD_HEIGHT = '200px'
+const HORIZONTAL_MIN_CARD_HEIGHT = '120px'
 const VERT_MIN_CARD_HEIGHT = '670px'
 
 const VERT_CARD_HEIGHT = '560px'
@@ -25,9 +25,9 @@ const VERT_CARD_WIDTH = '380px'
 
 const VERT_CARD_WIDTH_MOBILE = '80vw'
 
-const HORIZONTAL_CARD_HEIGHT = '210px'
+const HORIZONTAL_CARD_HEIGHT = '150px'
 const HORIZONTAL_CARD_WIDTH = '80vw'
-const HORIZONTAL_CARD_MAX_WIDTH = '670px'
+const HORIZONTAL_CARD_MAX_WIDTH = '350px'
 
 enum OrientationMode {
   Auto = 'auto',
