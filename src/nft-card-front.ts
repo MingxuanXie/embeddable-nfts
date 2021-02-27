@@ -6,7 +6,6 @@ import { styleMap } from 'lit-html/directives/style-map'
 import {
   Network,
   OpenSeaAsset,
-  OpenSeaCollection,
   OpenSeaFungibleToken
 } from 'opensea-js/lib/types'
 /* lit-element classes */
@@ -128,7 +127,7 @@ export class NftCardFrontTemplate extends LitElement {
       }
       .asset-action-buy button {
         width: 100%;
-        background: #3291e9;
+        background: black;
         border-radius: 5px;
         height: 35px;
         color: white;
@@ -141,22 +140,13 @@ export class NftCardFrontTemplate extends LitElement {
         text-transform: uppercase;
       }
       .asset-action-buy button:hover {
-        background: rgb(21, 61, 98);
+        background: rgb(61, 61, 61);
       }
       .asset-link {
         text-decoration: none;
         color: #222222;
       }
     `
-  }
-
-  private static getAssetImageStyles(collection: OpenSeaCollection) {
-    // @ts-ignore - since card_display_style is not serialized by opensea sdk yet
-    const cardDisplayStyle = collection.displayData.card_display_style
-    return {
-      padding: cardDisplayStyle === 'padded' ? '10px' : '',
-      'background-size': `${cardDisplayStyle}`
-    }
   }
 
   public getAssetPriceTemplate() {
@@ -209,7 +199,6 @@ export class NftCardFrontTemplate extends LitElement {
               ></info-button>
             `
           : ''}
-        ${this.getAssetImageTemplate()}
 
         <div class="asset-details-container">
           <div class="asset-detail">
@@ -288,27 +277,6 @@ export class NftCardFrontTemplate extends LitElement {
         <div class="asset-detail-price-value">
           ${toBaseDenomination(price, paymentToken.decimals)}
         </div>
-      </div>
-    `
-  }
-
-  private getAssetImageTemplate() {
-    if (!this.asset) {
-      return undefined
-    }
-
-    const { openseaLink, imageUrl, collection } = this.asset
-    return html`
-      <div class="asset-image-container">
-        <a href="${openseaLink}" target="_blank">
-          <div
-            class="asset-image"
-            style=${styleMap({
-              'background-image': `url(${imageUrl})`,
-              ...NftCardFrontTemplate.getAssetImageStyles(collection)
-            })}
-          ></div>
-        </a>
       </div>
     `
   }
