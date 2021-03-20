@@ -30,12 +30,12 @@ export class NftCardFrontTemplate extends LitElement {
         background: #ffffff;
         border-radius: 5px;
         // display: grid;
-        // grid-template-columns: 1fr 2fr;
-        position: relative;
+        // grid-template-columns: 1fr 1fr;
+        // position: relative;
         width: 100%;
         height: 100%;
         transform: translateY(0);
-        overflow: hidden;
+        overflow: visible;
       }
       .is-vertical {
         grid-template-columns: 100%;
@@ -48,8 +48,8 @@ export class NftCardFrontTemplate extends LitElement {
       .asset-details-container {
         display: grid;
         grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
-        padding: 20px;
+        grid-template-columns: minmax(100px, 350px) 1fr;
+        padding: 10px;
         align-items: center;
       }
       .asset-detail {
@@ -66,13 +66,14 @@ export class NftCardFrontTemplate extends LitElement {
         font-size: 12px;
       }
       .asset-detail-name {
-        font-weight: 400;
+        font-weight: 300;
         text-align: left;
+        display: flex;
       }
       .asset-detail-price {
         align-items: flex-end;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 16px;
+        font-weight: 300;
         display: flex;
         flex-flow: row;
         justify-content: flex-end;

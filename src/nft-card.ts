@@ -23,11 +23,11 @@ const VERT_MIN_CARD_HEIGHT = '670px'
 const VERT_CARD_HEIGHT = '560px'
 const VERT_CARD_WIDTH = '380px'
 
-const VERT_CARD_WIDTH_MOBILE = '80vw'
+const VERT_CARD_WIDTH_MOBILE = '50vw'
 
 const HORIZONTAL_CARD_HEIGHT = '150px'
 const HORIZONTAL_CARD_WIDTH = '80vw'
-const HORIZONTAL_CARD_MAX_WIDTH = '350px'
+const HORIZONTAL_CARD_MAX_WIDTH = '400px'
 
 enum OrientationMode {
   Auto = 'auto',
@@ -82,7 +82,7 @@ export class NftCard extends LitElement {
         -webkit-font-smoothing: antialiased;
       }
       .card {
-        background-color: white;
+        background-color: transparent;
         font-family: 'Roboto', sans-serif;
         -webkit-font-smoothing: antialiased;
         font-style: normal;

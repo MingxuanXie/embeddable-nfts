@@ -48,3 +48,8 @@ For developers looking to contribute or modify the code, or view the example use
 
 #### Development server
 This project uses webpack for building and running a development server. Once the server starts, any changes made will trigger a rebuild after which those changes should be reflected in your browser.
+
+## BUILD
+```
+npm run-script build
+```

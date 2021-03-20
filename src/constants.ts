@@ -7,8 +7,8 @@ export const NO_WEB3_ERROR: string =
 
 export const BTN_TEXT: { [index: string]: string } = {
   [ButtonType.Manage]: 'manage this work ❯',
-  [ButtonType.Buy]: 'collect this work ❯',
+  [ButtonType.Buy]: 'buy this work ❯',
   [ButtonType.View]: 'view on openSea ❯',
   [ButtonType.SwitchNetwork]: 'switch to ',
-  [ButtonType.Unlock]: 'collect this work ❯'
+  [ButtonType.Unlock]: 'buy this work ❯'
 }
